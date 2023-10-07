@@ -1,7 +1,11 @@
-import React from 'react';
+import React, {  useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const Navbar = () => {
+  const { user , OUT }= useContext(AuthContext)
+
+  console.log(user)
    
   const link = <>
   <NavLink to='/' className=' text-lg font-medium '  >Home</NavLink>
@@ -11,11 +15,19 @@ const Navbar = () => {
   
   </>
 
-
+  const handleSignOut = ()=>{
+       OUT()
+       .then(res => {
+        console.log('Sign out ', res.user)
+       })
+       .catch(err => {
+        console.log(err.message)
+       })
+  }
 
     return (
       <div data-aos="fade-down" className=' '>
- <div className="navbar  rounded-b-xl container py-5 mx-auto px-5 ">
+ <div className="navbar  rounded-b-xl container  mx-auto px-5 ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -26,19 +38,44 @@ const Navbar = () => {
           </ul>
         </div>
         <img className='w-[100px]' src="/images/logo.png" alt="" />
-        <h1 className='font-bold text-xl text-red-900'>MarriageMasters</h1>
+        <h1 className='font-bold text-xl md:block hidden  text-red-900'>MarriageMasters</h1>
       </div>
       <div className="navbar-center hidden lg:flex ">
         <ul className="menu menu-horizontal px-1 gap-4">
           {link}
         </ul>
       </div>
-      <div className="navbar-end">
-      <NavLink to='/logIn'>
+   
+        {
+          user ?   
+        
+               <div className="navbar-end gap-5">
+                <div className='flex flex-col items-center'>
+                <img className='w-[50px] rounded-full' src={user.photoURL} alt="" />
+                <p className='font-medium'>{user.displayName}</p>
+                </div>
+
+              
+                <NavLink onClick={handleSignOut}>
+              <button className='btn bg-red-800 hover:bg-red-950 text-white'>Sign Out</button>
+                </NavLink>
+         </div> :
+               <div className="navbar-end gap-5">
+                <div className='flex flex-col items-center'>
+                <img className='w-[50px]' src="/images/user.png" alt="" />
+                <p className='font-medium'>Unknown</p>
+                </div>
+
+              
+                 <NavLink to='/login'>
       <button className='btn bg-red-800 hover:bg-red-950 text-white'>Log In</button>
         </NavLink>
+                 </div>
+   
+        }
+
         
-      </div>
+      
     </div>
       </div>
      

@@ -10,6 +10,7 @@ import Layout from './Layout/Layout';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import AuthProvider from './Components/Provider/AuthProvider';
+import Register from './Register/Register';
 
 
 const router = createBrowserRouter([
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       , {
         path:'/login',
         element:<Login></Login>
+      }
+      ,{
+        path:'/register',
+        element:<Register></Register>
       }
     ]
   },
