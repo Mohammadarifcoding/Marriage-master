@@ -1,14 +1,33 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../Home/Footer/Footer";
+import { signInWithPopup } from 'firebase/auth';
+import { AuthContext } from "../Provider/AuthProvider";
 
 const Login = () => {
-  
+    const { Google , update , In } = useContext(AuthContext)
     const handleSubmit = e =>{
         e.preventDefault()
         const email = e.target.email.value
         const password = e.target.password.value
         console.log(password,email)
+        In(email,password)
+        .then(res => {
+          console.log('User sign in ', res.user)
+        })
+        .catch(err => {
+          console.log(err.message)
+        })
+    }
+
+    const handleGoogle = ()=>{
+       Google()
+       .then(res => {
+        console.log('Successfully compelted by google ', res.user)
+       })
+       .catch(err => {
+        console.log(err.message)
+       })
     }
 
   return (
@@ -62,6 +81,8 @@ const Login = () => {
               >
                 Login
               </button>
+
+              <button onClick={handleGoogle} className="  bg-slate-800 text-white hover:text-slate-800 my-2 px-10  py-2 btn">Sign in with Google <img className="w-[20px]" src="/images/google.png" alt="" /></button>
               <p className="text-xs text-gray-500 mt-3 text-center">
                 New User ?{" "}
                 <Link className="text-blue-700" to="/register">

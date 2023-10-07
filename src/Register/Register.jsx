@@ -5,7 +5,7 @@ import { AuthContext } from "../Components/Provider/AuthProvider";
 
 const Register = () => {
 
-    const { creatUser , OUT  , update , In} = useContext(AuthContext)
+    const { creatUser , OUT  , update , In , Google} = useContext(AuthContext)
 
 const handleSubmit = e =>{
     e.preventDefault()
@@ -48,7 +48,15 @@ const handleSubmit = e =>{
 }
 
 
-
+const handleGoogle = ()=>{
+  Google()
+  .then(res => {
+   console.log('Successfully compelted by google ', res.user)
+  })
+  .catch(err => {
+   console.log(err.message)
+  })
+}
 
   return (
     <div>
@@ -130,6 +138,7 @@ const handleSubmit = e =>{
               >
                 Register
               </button>
+              <button onClick={handleGoogle} className="  bg-slate-800 text-white hover:text-slate-800 my-2 px-10  py-2 btn">Create Account with Google <img className="w-[20px]" src="/images/google.png" alt="" /></button>
               <p className="text-xs text-gray-500 mt-3 text-center">
                 Already User ?
                 <Link className="text-blue-700" to="/login">
