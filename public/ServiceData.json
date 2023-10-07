@@ -1,0 +1,149 @@
+[
+  {
+    "id": 1,
+    "name": "Venue Selection and Decoration",
+    "short_description": "Choose the perfect venue and create a dream setting for your wedding.",
+    "long_description": {
+      "brief": "Our experts help you find the ideal wedding venue and create a stunning atmosphere.",
+      "importance": "The venue sets the tone for your special day. Our expertise ensures a magical backdrop that reflects your style and creates unforgettable memories.",
+      "key_values": [
+        "Venue Selection",
+        "Elegant Decoration",
+        "Memorable Ambiance"
+      ]
+    },
+    "price": "$5,000",
+    "bangladesh_available": true,
+    "foreign_available": true,
+    "cost_for_100_people": "$15,000",
+    "thumbnailImg": "https://i.ibb.co/4g1Zx15/photos-by-lanty-dcb2pog89f-Q-unsplash.jpg",
+    "images": [
+      "https://i.ibb.co/Ny96mDT/shardayyy-photography-f-Jzm-Pe-a0e-U-unsplash.jpg",
+      "https://i.ibb.co/BjbX8st/jakob-owens-4-BQPUDJx-Me8-unsplash.jpg",
+      "https://i.ibb.co/hYx74V1/keenan-barber-9jz-STa4p-Jes-unsplash.jpg",
+      "https://i.ibb.co/wrsQcKQ/luwadlin-bosman-P-HRPYp-FTNA-unsplash.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Catering and Banquet Services",
+    "short_description": "Delicious cuisine to delight your guests from diverse culinary traditions.",
+    "long_description": {
+      "brief": "We offer a diverse menu to cater to all tastes and dietary preferences.",
+      "importance": "Great food is a cornerstone of memorable weddings. We ensure a culinary delight with a range of dishes that please every palate, leaving your guests raving about the feast.",
+      "key_values": [
+        "Diverse Cuisine",
+        "Exceptional Quality",
+        "Customized Menus"
+      ]
+    },
+    "price": "$7,500",
+    "bangladesh_available": true,
+    "foreign_available": false,
+    "cost_for_100_people": "$22,500",
+    "thumbnailImg": "https://i.ibb.co/cgTcz9y/saile-ilyas-Siwrp-Bnx-Dww-unsplash.jpg",
+    "images": [
+      "https://i.ibb.co/4fTYwSV/waiter-carries-plate-with-tasty-snacks-1-1.jpg",
+      "https://i.ibb.co/hHzhZ6f/swedish-buffet-with-various-side-dishes-fruits-1.jpg",
+      "https://i.ibb.co/6yFqW5b/festive-dinner-table-decorated-white-green-tones-1.jpg",
+      "https://i.ibb.co/wwzVnGf/elegant-wedding-dishes-1.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Entertainment and Music",
+    "short_description": "Keep the celebration alive with live bands, DJs, and cultural performers.",
+    "long_description": {
+      "brief": "We ensure your guests are entertained throughout your wedding festivities.",
+      "importance": "Entertainment creates lasting memories. Our professional musicians, DJs, and cultural performers bring energy and excitement to your celebration, ensuring everyone has a blast.",
+      "key_values": ["Live Bands", "DJs", "Cultural Performers"]
+    },
+    "price": "$3,500",
+    "bangladesh_available": true,
+    "foreign_available": false,
+    "cost_for_100_people": "$10,500",
+    "thumbnailImg": "https://i.ibb.co/9yBjR9H/newlyweds-dancing-their-wedding-1.jpg",
+    "images": [
+      "https://i.ibb.co/475JbBh/newlyweds-kissing-passionately-while-dancing-1.jpg",
+      "https://i.ibb.co/CvjrYKz/wedding-couple-dancing-1.jpg",
+      "https://i.ibb.co/BytyVCS/wedding-couple-dancing-tent-1.jpg",
+      "https://i.ibb.co/09Q0DXw/musicial-music-live-band-performing-stage-with-different-lights-1.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Bridal Attire and Styling",
+    "short_description": "Elegant attire and professional styling for the bride and bridal party.",
+    "long_description": {
+      "brief": "We provide exquisite bridal attire and ensure you look your best on your special day.",
+      "importance": "The bride's appearance is central. Our experts create stunning bridal looks, incorporating the latest trends and timeless elegance to make you feel like royalty.",
+      "key_values": [
+        "Exquisite Bridal Attire",
+        "Professional Styling",
+        "Flawless Looks"
+      ]
+    },
+    "price": "$2,500",
+    "bangladesh_available": true,
+    "foreign_available": true,
+    "cost_for_100_people": "$7,500",
+    "thumbnailImg": "https://i.ibb.co/3dhtStG/young-women-enjoying-bachelorette-party.jpg",
+    "images": [
+      "https://i.ibb.co/MpCbRXd/rejaul-karim-Xh-D8j4b-DN6-I-unsplash.jpg",
+      "https://i.ibb.co/w69YHZs/dollar-gill-Xh-PCWIc-Qvw-unsplash.jpg",
+      "https://i.ibb.co/2PtwB4h/gurpreet-singh-m-a-Oj-Lq-PWe-I-unsplash.jpg",
+      "https://i.ibb.co/HzVp1Yw/adnan-pervaiz-n-PEy-Thn8-HX4-unsplash.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Pre-Wedding Photoshoots",
+    "short_description": "Capture the love and excitement of your journey to marriage with professionally organized pre-wedding photoshoots.",
+    "long_description": {
+      "brief": "We create stunning and candid images that can be used for invitations, displays, and keepsakes.",
+      "importance": "Preserve the joy and anticipation of your upcoming wedding with beautiful pre-wedding photos. Our skilled photographers and unique themes will tell your love story through photos you'll cherish forever.",
+      "key_values": [
+        "Professional Photoshoots",
+        "Unique Themes",
+        "Candid Moments"
+      ]
+    },
+    "price": "$1,800",
+    "bangladesh_available": true,
+    "foreign_available": true,
+    "cost_for_100_people": "$5,400",
+    "thumbnailImg": "https://i.ibb.co/0hgMrjD/mariah-krafft-ayc1-G5w-V3a-A-unsplash.jpg",
+    "images": [
+      "https://i.ibb.co/cDZmdny/waiting.jpg",
+      "pre-wedding_img2.jpg",
+      "pre-wedding_img3.jpg",
+      "pre-wedding_img4.jpg"
+    ]
+  },
+
+  {
+    "id": 6,
+    "name": "Destiny Wedding",
+    "short_description": "Plan your dream wedding, aligning it perfectly with your destiny.",
+    "long_description": {
+      "brief": "We create weddings that align with your destiny, ensuring a unique and magical experience.",
+      "importance": "Destiny weddings are deeply personal and spiritual. Our services craft a once-in-a-lifetime event where every element is designed to reflect your unique journey and bond.",
+      "key_values": [
+        "Personalized Destiny Weddings",
+        "Spiritual Significance",
+        "Unique Experiences"
+      ]
+    },
+    "price": "$8,000",
+    "bangladesh_available": false,
+    "foreign_available": true,
+    "cost_for_100_people": "$24,000",
+    "thumbnailImg": "https://i.ibb.co/986sS0r/arshad-pooloo-Gdw-Wr-LHdwpw-unsplash-1-1.jpg",
+    "images": [
+      "destiny_wedding_img1.jpg",
+      "destiny_wedding_img2.jpg",
+      "destiny_wedding_img3.jpg",
+      "destiny_wedding_img4.jpg"
+    ]
+  }
+]
