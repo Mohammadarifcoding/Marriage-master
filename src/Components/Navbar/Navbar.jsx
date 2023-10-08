@@ -1,16 +1,18 @@
 import React, {  useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 
 const Navbar = () => {
   const { user , OUT }= useContext(AuthContext)
+  const navigation = useNavigate()
+  const location = useLocation()
 
   console.log(user)
    
   const link = <>
   <NavLink to='/' className=' text-lg font-medium '  >Home</NavLink>
   <NavLink to='/About' className=' text-lg font-medium '>About</NavLink>
-  <NavLink to='/Gallery' className=' text-lg font-medium'>Gallery</NavLink>
+  <NavLink to='/gallery' className=' text-lg font-medium'>Gallery</NavLink>
   
   
   </>
@@ -18,6 +20,10 @@ const Navbar = () => {
   const handleSignOut = ()=>{
        OUT()
        .then(res => {
+        localStorage.removeItem('user')
+      {
+        navigation(location.pathname)
+      }
         console.log('Sign out ', res.user)
        })
        .catch(err => {
@@ -37,7 +43,7 @@ const Navbar = () => {
            {link}
           </ul>
         </div>
-        <img className='w-[100px]' src="/images/logo.png" alt="" />
+        <img className='w-[70px]' src="/images/logo.png" alt="" />
         <h1 className='font-bold text-xl md:block hidden  text-red-900'>MarriageMasters</h1>
       </div>
       <div className="navbar-center hidden lg:flex ">

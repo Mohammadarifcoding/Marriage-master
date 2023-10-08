@@ -44,7 +44,7 @@ const Service = ({ data }) => {
           <p className="font-bold text-lg text-center flex-grow">Price : <span className=" text-red-800">{price}</span> </p>
         </div>
 
-        <Link>
+        <Link to={`/descrition/${id}`}>
           <button className="btn bg-red-700 hover:bg-red-900 flex justify-center text-white mx-auto my-5">
             View Details
           </button>

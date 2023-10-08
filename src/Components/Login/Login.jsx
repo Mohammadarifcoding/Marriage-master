@@ -1,10 +1,15 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import Footer from "../Home/Footer/Footer";
 import { signInWithPopup } from 'firebase/auth';
 import { AuthContext } from "../Provider/AuthProvider";
 
 const Login = () => {
+  const {user } = useContext(AuthContext)
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  console.log(location)
     const { Google , update , In } = useContext(AuthContext)
     const handleSubmit = e =>{
         e.preventDefault()
@@ -14,6 +19,7 @@ const Login = () => {
         In(email,password)
         .then(res => {
           console.log('User sign in ', res.user)
+          { location.state ? navigate(location.state) : navigate('/') }
         })
         .catch(err => {
           console.log(err.message)
@@ -24,6 +30,9 @@ const Login = () => {
        Google()
        .then(res => {
         console.log('Successfully compelted by google ', res.user)
+        console.log(location.state)
+        { location.state ? navigate(location.state) : navigate('/') }
+        
        })
        .catch(err => {
         console.log(err.message)
@@ -34,11 +43,7 @@ const Login = () => {
     <div>
       <div className="bg-slate-700 min-h-screen">
         <section className="text-gray-600 body-font ">
-          <div className="text-white flex flex-col justify-center pt-10 items-center">
-            <img className="w-[100px]" src="/images/logo2.png" alt="" />{" "}
-            <span className="text-bold text-2xl">MarriageMasters</span>
-          </div>
-          <div className="container px-5 pt-10 pb-20 mx-auto  justify-center items-center">
+          <div className="container px-5 pt-6 pb-20 mx-auto  justify-center items-center">
             <form onSubmit={handleSubmit} className="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col w-full mt-10 mx-auto">
               <h2 className="   font-semibold text-2xl title-font mb-5 text-center">
                 Login Your Account

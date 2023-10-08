@@ -7,23 +7,29 @@ const AuthProvider = ({children}) => {
    
     const [data, setData ] = useState([])
     const [user,setUser] = useState(null)
+    const [loading, setLoading] = useState(false)
     useEffect(()=>{
+        setLoading(true)
         fetch('/ServiceData.json')
         .then(res => res.json())
         .then(value => setData(value))
     },[])
   
      const creatUser = (email,password)=>{
+        setLoading(true)
         return createUserWithEmailAndPassword(auth,email,password)
      } 
 
      const OUT = ()=>{
+        setLoading(true)
         return signOut(auth)
      }
 
      useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth,(currentUser)=>{
+
             setUser(currentUser)
+            setLoading(false)
             console.log('Ovserving',currentUser)
         })
         return ()=>{
@@ -33,20 +39,23 @@ const AuthProvider = ({children}) => {
 
      const Google = ()=>{
         const provider = new GoogleAuthProvider()
+        setLoading(true)
         return signInWithPopup(auth,provider)
      }
 
      const update = (name,photo)=>{
+        setLoading(true)
        return updateProfile(auth.currentUser, {
         displayName:name,photoURL:photo
         })
     }
 
     const In = (email,password)=>{
+        setLoading(true)
         return signInWithEmailAndPassword(auth,email,password)
     }
 
-   const AuthInfo = {data ,user, creatUser , OUT , Google , update , In }
+   const AuthInfo = {data , loading ,user, creatUser , OUT , Google , update , In }
 
     return (
         <AuthContext.Provider value={AuthInfo}>

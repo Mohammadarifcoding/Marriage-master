@@ -4,7 +4,7 @@ const OfferItem = ({name,img, description}) => {
     return (
         <div data-aos="fade-down" className='relative shadow-2xl w-[300px] mx-auto'>
         <img className='h-[500px] w-[300px] border-4 border-white rounded-xl'  src={img} alt="" />
-        <img className=' absolute -top-10 mx-auto right-0 left-0 w-full ' src="/public/images/offerLogo (2).png" alt="" />
+        <img className=' absolute -top-10 mx-auto right-0 left-0 w-full ' src="/images/offerLogo (2).png" alt="" />
         <img className='absolute bottom-0 mx-auto right-0 left-0 w-full ' src="/images/piclogo.png" alt="" />
         <div style={{
             borderTopRightRadius:'210px'

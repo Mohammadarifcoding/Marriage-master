@@ -11,9 +11,9 @@ const PerFectWedding = () => {
                  <img className='w-[200px]' src="/images/headinLogo.png" alt="" />
             </div>
             <div data-aos="" className='w-1/2 flex flex-wrap gap-5 justify-center'>
-                 <img data-aos="zoom-in-right" className='rounded-full  drop-shadow-2xl' src="/public/images/item1.jpg" alt="" />
-                 <img  data-aos="zoom-out" className='rounded-full drop-shadow-2xl' src="/public/images/item2.jpg" alt="" />
-                 <img data-aos="zoom-out-down" className='rounded-full drop-shadow-2xl' src="/public/images/item3.jpg" alt="" />
+                 <img data-aos="zoom-in-right" className='rounded-full  drop-shadow-2xl' src="/images/item1.jpg" alt="" />
+                 <img  data-aos="zoom-out" className='rounded-full drop-shadow-2xl' src="/images/item2.jpg" alt="" />
+                 <img data-aos="zoom-out-down" className='rounded-full drop-shadow-2xl' src="/images/item3.jpg" alt="" />
             </div>
         </div>
         </div>
