@@ -2,12 +2,13 @@ import React, { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Footer from "../Components/Home/Footer/Footer";
 import { AuthContext } from "../Components/Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Register = () => {
   
     const { creatUser , OUT  , update , In , Google} = useContext(AuthContext)
     const navigate = useNavigate()
-    const location = useLocation()
+    const lo = useLocation()
 const handleSubmit = e =>{
     e.preventDefault()
     const name = e.target.name.value
@@ -19,22 +20,18 @@ const handleSubmit = e =>{
     .then( res => {
       console.log('User created',res.user)
 
-       In(email,password)
-       .then(res => {
-        console.log('User signed in', res.user)
-
+        Swal.fire(
+          'Good job!',
+          `${name } are signed in successfully`,
+          'success'  )
+       
         update(name,photo)
-        .then(res => {
-         console.log('Updated',res.user)
-          { location.state ? navigate(location.state) : navigate('/') }
-        })
-        .catch(err => {
-         console.log(err.message)
-        })
-       })
-       .catch(err => {
-        console.log(err.message)
-       })
+        .then()
+        .catch()
+     
+       { lo.state ? navigate(lo.state) : navigate('/') }
+       
+       location.reload()
 
     
 
@@ -55,7 +52,7 @@ const handleGoogle = ()=>{
   Google()
   .then(res => {
    console.log('Successfully compelted by google ', res.user)
-   { location.state ? navigate(location.state) : navigate('/') }
+   { lo.state ? navigate(lo.state) : navigate('/') }
   })
   .catch(err => {
    console.log(err.message)
@@ -66,7 +63,7 @@ const handleGoogle = ()=>{
     <div>
       <div className="bg-slate-700 min-h-screen" >
         <section className="text-gray-600 body-font pb-10 ">
-          <div className="container px-5 pt-1 mx-auto  justify-center items-center">
+          <div data-aos="flip-left" className="container px-5 pt-1 mx-auto  justify-center items-center">
             <form onSubmit={handleSubmit} className="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-6 flex flex-col w-full mt-10 mx-auto">
               <h2 className=" font-semibold text-2xl title-font mb-3 text-center">
                 Register Your Account
@@ -87,7 +84,7 @@ const handleGoogle = ()=>{
                   className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
-              {/* <div className="relative mt-1 mb-2">
+              <div className="relative mt-1 mb-2">
                 <label
                   htmlFor="photo"
                   className="leading-10 font-semibold  text-gray-600"
@@ -101,7 +98,7 @@ const handleGoogle = ()=>{
                   name="photo"
                   className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
-              </div> */}
+              </div>
               <div className="relative mt-1 mb-2">
                 <label
                   htmlFor="Email"

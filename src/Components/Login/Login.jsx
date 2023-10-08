@@ -3,6 +3,9 @@ import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import Footer from "../Home/Footer/Footer";
 import { signInWithPopup } from 'firebase/auth';
 import { AuthContext } from "../Provider/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+import Swal from "sweetalert2";
 
 const Login = () => {
   const {user } = useContext(AuthContext)
@@ -19,31 +22,51 @@ const Login = () => {
         In(email,password)
         .then(res => {
           console.log('User sign in ', res.user)
+          Swal.fire(
+            'Good job!',
+            'You are logeed in Successfully',
+            'success'
+          )
           { location.state ? navigate(location.state) : navigate('/') }
         })
         .catch(err => {
           console.log(err.message)
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong! Please try again',
+          })
         })
     }
 
     const handleGoogle = ()=>{
        Google()
        .then(res => {
+        Swal.fire(
+          'Good job!',
+          'You are logeed in Successfully',
+          'success'
+        )
         console.log('Successfully compelted by google ', res.user)
         console.log(location.state)
         { location.state ? navigate(location.state) : navigate('/') }
         
        })
        .catch(err => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Something went wrong! Please try again',
+        })
         console.log(err.message)
        })
     }
 
   return (
-    <div>
+    <div >
       <div className="bg-slate-700 min-h-screen">
         <section className="text-gray-600 body-font ">
-          <div className="container px-5 pt-6 pb-20 mx-auto  justify-center items-center">
+          <div data-aos="flip-left" className="container px-5 pt-6 pb-20 mx-auto  justify-center items-center">
             <form onSubmit={handleSubmit} className="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col w-full mt-10 mx-auto">
               <h2 className="   font-semibold text-2xl title-font mb-5 text-center">
                 Login Your Account
@@ -96,6 +119,7 @@ const Login = () => {
               </p>
             </form>
           </div>
+          <ToastContainer></ToastContainer>
         </section>
       </div>
       <Footer></Footer>

@@ -54,7 +54,8 @@ const router = createBrowserRouter([
       ,
       {
         path:'/contact',
-        element:<Contact></Contact>
+        loader:()=>fetch('/Gallery.json'),
+        element: <PrivateProvider><Contact></Contact></PrivateProvider>
       }
     ]
   },

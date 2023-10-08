@@ -18,9 +18,9 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B
 
-<i>Write your explanation here</i>
+<i>I didn't decalared anything like greetign . Without declaring if i want to console the value of the element that it will throw a reference Error. It will give me reference error because it can't find the reference or declartion of the vairable</i>
 
 </p>
 </details>
@@ -43,9 +43,9 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C
 
-<i>Write your explanation here</i>
+<i>Here i had given a = 1 , and it is a number. And i had given b = "2" . That seems number but it is a string because of the "". So, if the try to add a number with a string. Than ultimately my value will be a string. So, that's why 1 converted to "1" because i was adding it with a string "2".So, the answer came "1" + "2" = "12"</i>
 
 </p>
 </details>
@@ -69,9 +69,9 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A
 
-<i>Write your explanation here</i>
+<i>First of all, I took the first element of my array and put it into a object as a value. So,I put only one data that's why it stores the data. And I changed the data in the 3rd line. And it will not make any effect on the food variable. Because i am not holding the references form there. I just copied on value item from there.</i>
 
 </p>
 </details>
@@ -94,9 +94,9 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B
 
-<i>Write your explanation here</i>
+<i>I called a function. But i didn't give the value of the parameter. That means i didn't defined the value of the parameter. So, if the function return the value of the undefined parameter value.Than simply it will return undefined</i>
 
 </p>
 </details>
@@ -122,9 +122,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C
 
-<i>Write your explanation here</i>
+<i>We are using a forEach method that iterates over the nums variable.Inside the forEach method we check if the num value is truthy value than add 1 with count. But we can see the first element of the nums array is 0. And 0 is a falsy value. That's why in the iteration it will not add 1 with the count.That's why it will be 3. </i>
 
 </p>
 </details>
