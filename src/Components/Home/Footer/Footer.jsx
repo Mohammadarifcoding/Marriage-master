@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div className=' bg-base-200'>
+        <div data-aos="zoom-in-up" className=' bg-base-200'>
    <footer className="footer p-10 text-base-content container mx-auto">
   <aside>
     <img className='w-[70px]' src="/images/logo.png" alt="" />

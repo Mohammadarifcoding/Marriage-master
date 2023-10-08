@@ -8,7 +8,7 @@ const Service = ({ data }) => {
 
   return (
     <div
-      data-aos="fade-up"
+      data-aos="flip-left"
       className=" max-h-[700px]  w-[100%] mb-7 border-2 bg-[#f0efef] lg:rounded-l-2xl shadow-xl lg:rounded-tr-2xl lg:rounded-br-[100px] flex md:flex-row justify-center flex-col gap-0 mx-auto "
     >
       <div className=" lg:w-[50%] w-full lg:h[100%] ">

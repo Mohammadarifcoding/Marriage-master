@@ -27,7 +27,8 @@ const PrivateProvider = ({children}) => {
 //    return children
 
   if(loading){
-   return (<div className='flex justify-center mt-[10%] items-center'>
+   return (<div className='flex flex-col justify-center mt-[13%] items-center'>
+    <p>Please wait...</p>
    <span className="loading loading-infinity  loading-lg"></span>
     </div> 
    )}

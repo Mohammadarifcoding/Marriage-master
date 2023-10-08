@@ -15,6 +15,7 @@ import Description from './Components/Description/Description';
 import PrivateProvider from './Components/Provider/PrivateProvider';
 import About from './Components/Description/About/About';
 import Gallery from './Components/Gallery/Gallery';
+import Contact from './Components/Contact/Contact';
 
 
 const router = createBrowserRouter([
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
       {
         path:'/about',
         loader:()=> fetch('/AboutUs.json'),
-        element: <About></About>
+        element:<PrivateProvider><About></About></PrivateProvider>
       }
       ,
       {
@@ -48,7 +49,12 @@ const router = createBrowserRouter([
       {
         path:'/gallery',
         loader:()=> fetch('/Gallery.json'),
-        element:<Gallery></Gallery>
+        element:<PrivateProvider><Gallery></Gallery></PrivateProvider>
+      }
+      ,
+      {
+        path:'/contact',
+        element:<Contact></Contact>
       }
     ]
   },

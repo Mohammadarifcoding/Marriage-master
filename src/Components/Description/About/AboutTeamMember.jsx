@@ -3,9 +3,9 @@ import React from 'react';
 const AboutTeamMember = ({data}) => {
     const {name,position} = data
     return (
-        <div className="p-4 lg:w-1/4 md:w-1/2 mx-auto">
+        <div className="p-4 lg:w-1/4 md:w-1/2  mx-auto ">
         <div className="h-full flex flex-col items-center text-center">
-          <img alt="team" className="flex-shrink-0  w-full h-56 object-cover object-center mb-4 rounded-full" src="/images/team.jpg" />
+          <img data-aos="zoom-in" alt="team" className="flex-shrink-0  w-full h-56 object-cover object-center mb-4 " src="/images/team.jpg" />
           <div className="w-full">
             <h2 className="title-font font-medium text-lg text-gray-900">{name}</h2>
             <h3 className="text-gray-500 mb-3">{position}</h3>

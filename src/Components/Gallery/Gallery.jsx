@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import GalleryPerImage from './GalleryPerImage';
+import Footer from '../Home/Footer/Footer';
 
 const Gallery = () => {
     const data = useLoaderData()
@@ -20,7 +21,7 @@ const Gallery = () => {
     </div>
   </div>
 </section>
-
+ <Footer></Footer>
         </div>
     );
 };
