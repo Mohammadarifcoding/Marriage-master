@@ -15,7 +15,31 @@ const handleSubmit = e =>{
     const email = e.target.email.value
     const photo = e.target.photo.value
     const password = e.target.password.value
-    
+
+    if(password.length < 6){
+        Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'The password need to contain 6 character',
+      })
+        return
+    }
+    else if(!/[A-Z]/.test(password)){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'The password need to contain Capital letter',
+      })
+      return
+    }
+    else if(!/[!@#$%^&*()_+{}[\]:;<>,.?~\\-]/.test(password)){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'The password need to contain special character',
+      })
+      return
+ }
     creatUser(email,password)
     .then( res => {
       console.log('User created',res.user)
@@ -28,18 +52,19 @@ const handleSubmit = e =>{
         update(name,photo)
         .then()
         .catch()
-     
+        { lo.state ? navigate(lo.state) : navigate('/') }
+        location.reload()
        { lo.state ? navigate(lo.state) : navigate('/') }
        
-       location.reload()
-
-    
-
-
-
+      
     })
     .catch(err => {
       console.log(err.message)
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Something went wrong. Please try again',
+      })
     })
     
 
@@ -51,11 +76,20 @@ const handleSubmit = e =>{
 const handleGoogle = ()=>{
   Google()
   .then(res => {
+    Swal.fire(
+      'Good job!',
+      `user are signed in successfully`,
+      'success'  )
    console.log('Successfully compelted by google ', res.user)
    { lo.state ? navigate(lo.state) : navigate('/') }
   })
   .catch(err => {
    console.log(err.message)
+   Swal.fire({
+    icon: 'error',
+    title: 'Oops...',
+    text: 'Something went wrong! Please try again',
+  })
   })
 }
 
@@ -135,7 +169,7 @@ const handleGoogle = ()=>{
               >
                 Register
               </button>
-              <button onClick={handleGoogle} className="  bg-slate-800 text-white hover:text-slate-800 my-2 px-10  py-2 btn">Create Account with Google <img className="w-[20px]" src="/images/google.png" alt="" /></button>
+              <button type="button" onClick={handleGoogle} className="bg-slate-800 text-white hover:text-slate-800 my-2 px-10  py-2 btn">Create Account with Google <img className="w-[20px]" src="/images/google.png" alt="" /></button>
               <p className="text-xs text-gray-500 mt-3 text-center">
                 Already User ?
                 <Link className="text-blue-700" to="/login">

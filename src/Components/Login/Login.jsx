@@ -34,7 +34,7 @@ const Login = () => {
           Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Something went wrong! Please try again',
+            text: "Your password and email doesn't match",
           })
         })
     }
@@ -110,7 +110,7 @@ const Login = () => {
                 Login
               </button>
 
-              <button onClick={handleGoogle} className="  bg-slate-800 text-white hover:text-slate-800 my-2 px-10  py-2 btn">Sign in with Google <img className="w-[20px]" src="/images/google.png" alt="" /></button>
+              <button type="button" onClick={handleGoogle} className="  bg-slate-800 text-white hover:text-slate-800 my-2 px-10  py-2 btn">Sign in with Google <img className="w-[20px]" src="/images/google.png" alt="" /></button>
               <p className="text-xs text-gray-500 mt-3 text-center">
                 New User ?{" "}
                 <Link className="text-blue-700" to="/register">

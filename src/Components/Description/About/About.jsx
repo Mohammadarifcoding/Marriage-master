@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import AboutTeamMember from './AboutTeamMember';
 import Footer from '../../Home/Footer/Footer';
 
 const About = () => {
     const data = useLoaderData()
+    useEffect(() => {
+      window.scrollTo(0, 0)
+    }, [])
     return (
         <div className=''>
   <section className="bg-gray-100 py-16">

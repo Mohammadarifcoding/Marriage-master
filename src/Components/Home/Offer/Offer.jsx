@@ -1,6 +1,7 @@
 import React from 'react';
 import OfferItem from './OfferItem';
 import { BsFillArrowThroughHeartFill } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
 const Offer = () => {
   const cardsData = [
@@ -35,7 +36,9 @@ const Offer = () => {
             <div  data-aos="fade-up" className=' w-full mb-10'>
                 <h1 className=' font-semibold text-5xl  leading-[50px] my-4   text-center'>Exclusive <span className='text-red-600 font-bold'>25% Off</span> </h1>
                 <p className='text-center w-full my-3 font-medium text-gray-700'>Offer going on in your favourite Destination wedding</p>
+                <Link to='/contact'>
                 <button className='btn bg-red-800 hover:bg-red-950 text-white w-[160px]  flex justify-center mx-auto'>Book Now <BsFillArrowThroughHeartFill></BsFillArrowThroughHeartFill></button>
+                </Link>
             </div>
         </div>
         </div>

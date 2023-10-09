@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "./../../Provider/AuthProvider";
 import Service from "./Service";
 
+
 const ServiceSection = () => {
   const { data } = useContext(AuthContext);
 

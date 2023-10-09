@@ -16,12 +16,14 @@ import PrivateProvider from './Components/Provider/PrivateProvider';
 import About from './Components/Description/About/About';
 import Gallery from './Components/Gallery/Gallery';
 import Contact from './Components/Contact/Contact';
+import Error from './Components/Error/Error';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout></Layout>,
+    errorElement:<Error></Error>,
     children:[
       {
         path:'/',

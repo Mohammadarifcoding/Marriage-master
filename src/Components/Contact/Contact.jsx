@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 
 const Contact = () => {
     const data = useLoaderData()
+    useEffect(() => {
+      window.scrollTo(0, 0)
+    }, [])
   return (
     <div>
   <section className="text-white bg-slate-700 body-font relative">

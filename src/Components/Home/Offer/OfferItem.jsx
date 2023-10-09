@@ -1,5 +1,6 @@
 import React from 'react';
 import { BsFillAirplaneEnginesFill } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 const OfferItem = ({name,img, description}) => {
     return (
         <div data-aos="fade-down" className='relative shadow-2xl w-[300px] mx-auto'>
@@ -12,7 +13,9 @@ const OfferItem = ({name,img, description}) => {
 
            <h1 className='mt-14 ml-4 font-medium text-2xl'>{name}</h1>
            <p className=' m-6 flex-grow' >{description}</p>
-            <button className='btn ml-4 bg-red-800 w-[30%] mb-5 flex hover:bg-red-950 text-white'>Go <BsFillAirplaneEnginesFill></BsFillAirplaneEnginesFill></button>
+           <Link to='/contact'>
+           <button className='btn ml-4 bg-red-800 w-[30%] mb-5 flex hover:bg-red-950 text-white'>Go <BsFillAirplaneEnginesFill></BsFillAirplaneEnginesFill></button>
+           </Link>
         </div>
       </div>
     );
