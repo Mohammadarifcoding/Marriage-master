@@ -57,9 +57,9 @@ const Navbar = () => {
           user ?   
         
                <div className="navbar-end gap-5">
-                <div className='flex flex-col items-center'>
+                <div className='flex flex-col items-center mx-3'>
                 <img className='w-[50px] rounded-full' src={user.photoURL} alt="" />
-                <p className='font-medium'>{user.displayName}</p>
+                <p className='font-medium text-center'>{user.displayName}</p>
                 </div>
 
               
@@ -67,10 +67,10 @@ const Navbar = () => {
               <button className='btn bg-red-800 hover:bg-red-950 text-white'>Sign Out</button>
                 </NavLink>
          </div> :
-               <div className="navbar-end gap-5">
+               <div className="navbar-end lg:gap-5 md:gap-3 gap-1 ">
                 <div className='flex flex-col items-center'>
                 <img className='w-[50px]' src="/images/user.png" alt="" />
-                <p className='font-medium'>Unknown</p>
+                
                 </div>
 
               

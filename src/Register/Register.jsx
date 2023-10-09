@@ -169,7 +169,7 @@ const handleGoogle = ()=>{
               >
                 Register
               </button>
-              <button type="button" onClick={handleGoogle} className="bg-slate-800 text-white hover:text-slate-800 my-2 px-10  py-2 btn">Create Account with Google <img className="w-[20px]" src="/images/google.png" alt="" /></button>
+              <button type="button" onClick={handleGoogle} className="bg-slate-800 btn text-white hover:text-slate-800 my-2 px-10 flex py-4  "> <span>Create Account  </span><img className="w-[20px]" src="/images/google.png" alt="" /></button>
               <p className="text-xs text-gray-500 mt-3 text-center">
                 Already User ?
                 <Link className="text-blue-700" to="/login">
